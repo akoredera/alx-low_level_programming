@@ -6,5 +6,6 @@
  */
 int main(void)
 {
+	printf("first project in C");
     return (0);
 }
