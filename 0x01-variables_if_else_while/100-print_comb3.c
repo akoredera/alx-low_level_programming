@@ -6,7 +6,6 @@
 int main(void)
 {
 	int i, j;
-	char letter;
 
 	for (i = 0; i <= 10; i++)
 	{
