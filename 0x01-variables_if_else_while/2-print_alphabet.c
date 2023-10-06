@@ -8,13 +8,16 @@
  */
 int main(void)
 {
-	int n;
+	int n, i;
 	char c;
+	char str[26];
 
-	for (n = 0; n <= 26; n++)
+	while ((c = getchar()) != EOF && n < 27)
+		str[n++];
+
+	for (i = 0; i <= n; i++)
 	{
-		c = getchar();
-		putchar(c);
+		putchar(str[i]);
 	}
 	putchar('\n');
 	return (0);
