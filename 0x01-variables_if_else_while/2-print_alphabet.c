@@ -8,9 +8,13 @@
  */
 int main(void)
 {
-	int n, c;
+	int n;
+	char c;
 
 	for (n = 0; n <= 26; n++)
+	{
+		c = getchar();
 		putchar(c);
+	}
 	return (0);
 }
