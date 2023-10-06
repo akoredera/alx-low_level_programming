@@ -13,7 +13,7 @@ int main(void)
 		{
 			for (k = 0; k < 10; k++)
 			{
-				for (l = 1; l < 10; l++)
+				for (l = j; l < 9; l++)
 				{
 					if ((i == 0 && j == 0) && (k == 0 && l == 0))
 						continue;
@@ -21,8 +21,8 @@ int main(void)
 					putchar('0' + j);
 					putchar(' ');
 					putchar('0' + k);
-					putchar('0' + l);
-					if ((i == 9 && j == 9) && (k == 9 && l == 9))
+					putchar('1' + l);
+					if ((i == 9 && j == 8) && (k == 9 && l == 8))
 						break;
 					putchar(',');
 					putchar(' ');
