@@ -1,4 +1,3 @@
-int _putchar(char c);
 
 /**
   * print_alphabet - Make the alphabet
