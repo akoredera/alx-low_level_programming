@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * _islower - return 1 or 0
@@ -9,7 +9,7 @@
  */
 int _islower(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c > 96 && c < 123)
 	{
 		return (1);
 	}
