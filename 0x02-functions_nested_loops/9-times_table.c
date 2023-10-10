@@ -1,18 +1,29 @@
 #include "main.h"
 
 /**
- * _isalpha - return 1 or 0
- * @c: The character to print;
- *
- * Return: On Success 1
- * Otherwise: 0 is returned
+ * times_table - print out multiplication 0 to 9
  */
-int _isalpha(int c)
+void times_table(void)
 {
-	if ((c > 96 && c < 123) || (c > 64 && c < 91))
-	{
-		return (1);
-	}
+	int a, b, c;
 
-	return (0);
+	for (a = 0; a < 10; a++)
+	{
+		for (b = 0; b < 10; b++)
+		{
+			c = a * b;
+			if (c >= 10 && c <= 90)
+			{
+				_putchar(c / 10 + '0');
+				_putchar(c % 10 + '0');
+			}
+			else
+				_putchar(c + '0');
+			if (b == 9)
+				break;
+			_putchar(',');
+			_putchar(' ');
+		}
+		_putchar('\n');
+	}
 }
