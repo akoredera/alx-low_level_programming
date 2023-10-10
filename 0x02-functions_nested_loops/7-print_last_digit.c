@@ -6,14 +6,17 @@
  *
  * Return: positve integer
  */
-int _abs(int n)
+int print_last_digit(int n)
 {
-	int g = n;
-
-	if (g < 0)
+	int g, h;
+	if (n < 0)
 	{
-		g = -(g);
-		return (g);
+		h = -(-n);
+		g = h % 10;
+		_putchar('0' + g);
+		return (0);
 	}
-	return (g);
+	g = n % 10;
+	_putchar('0' + g);
+	return (0);
 }
