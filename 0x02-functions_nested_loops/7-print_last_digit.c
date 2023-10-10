@@ -1,22 +1,21 @@
 #include "main.h"
 
 /**
- * _abs - return absolute integer
+ * print_last_digit  - return the last digit
  * @n: The number to print;
  *
  * Return: positve integer
  */
 int print_last_digit(int n)
 {
-	int g, h;
+	int g;
+
+	g = n % 10;
+
 	if (n < 0)
 	{
-		h = -(-n);
-		g = h % 10;
-		_putchar('0' + g);
-		return (0);
+		g = g * -1;
 	}
-	g = n % 10;
-	_putchar('0' + g);
-	return (0);
+	_putchar(g + '0');
+	return (g);
 }
