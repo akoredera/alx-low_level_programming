@@ -1,4 +1,3 @@
-
 /**
   * print_alphabet - Make the alphabet
   *
