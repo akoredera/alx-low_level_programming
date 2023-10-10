@@ -8,9 +8,10 @@
  * Return: On Success 1
  * Otherwise: 0 is returned
  */
-int _islower(int c)
+int _islower(char c)
 {
-	if (int islower(int c))
+	if (int islower(c))
 		return (1);
 	else
 		return (0);
+}
