@@ -1,41 +1,36 @@
 #include "main.h"
+#include "stdio.h"
 
+/**
+ * print_to_98 - print out number to 98
+ * @n: input number to start
+ */
 void print_to_98(int n)
 {
-	int a;
-	if (n < 98)
+	if (n <= 98)
 	{
-		for (a = n; a <= 98; a++)
+		for (; n <= 98; n++)
 		{
-			_putchar(a + '0');
-			if (a > 9 || a < -9) 
+			if (n == 98)
 			{
-				_putchar(a / 10 + '0');
-				_putchar(a % 10 + '0');
+				printf("%d\n", n);
+				break;
 			}
-			_putchar(',');
-			_putchar(' ');
+			else
+				printf("%d, ", n);
 		}
 	}
 	else if (n > 98)
 	{
-		for (a = n; a >= 98; a--)	
+		for (; n >= 98; n--)
 		{
-			if (a > 9)
+			if (n == 98)
 			{
-				_putchar(a / 10 + '0');
-				_putchar(a % 10 + '0');
+				printf("%d\n", n);
+				break;
 			}
-			_putchar(a + '0');
-			_putchar(',');
-			_putchar(' ');
+			else
+				printf("%d, ", n);
 		}
 	}
-	else
-	{
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	_putchar('\n');
-
 }
