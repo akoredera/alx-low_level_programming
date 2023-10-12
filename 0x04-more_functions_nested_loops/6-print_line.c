@@ -8,7 +8,9 @@ void print_line(int n)
 {
 	int a;
 
-	if (n >= 1)
+	if (n == 0)
+		_putchar('\n');
+	else
 	{
 		for (a = 0; a <= n; a++)
 		{
@@ -16,6 +18,4 @@ void print_line(int n)
 		}
 		_putchar('\n');
 	}
-	else
-		_putchar('\n');
 }
