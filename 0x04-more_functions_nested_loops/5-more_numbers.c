@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_most_numbers - print digit 0 - 9 without 2 and 4
+ * more_numbers - print digit 0 - 14
  */
 void more_numbers(void)
 {
