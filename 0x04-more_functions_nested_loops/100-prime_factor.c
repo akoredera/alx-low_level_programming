@@ -4,7 +4,7 @@
  * prime_factors - accept a value to find it prime factors
  * @a: value to find it prime factor
  */
-void prime_factors(int a)
+void prime_factors(long int a)
 {
 	int b;
 
@@ -23,7 +23,7 @@ void prime_factors(int a)
 	}
 	printf("%d \n", b);
 	if (a > 2)
-		printf("%d \n", a);
+		printf("%li \n", a);
 }
 
 /**
