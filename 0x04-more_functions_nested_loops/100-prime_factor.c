@@ -1,5 +1,19 @@
 #include "stdio.h"
 
+long int prime_factors(long int a);
+/**
+ * main - entry point
+ *
+ * Return: 0 success
+ */
+int main(void)
+{
+	long int n = 612852475143;
+
+	printf("%li \n", prime_factors(n));
+	return (0);
+}
+
 /**
  * prime_factors - accept a value to find it prime factors
  * @a: value to find it prime factor
@@ -14,9 +28,7 @@ long int prime_factors(long int a)
 	{
 		largestNumb = 2;
 		a = a / 2;
-
 	}
-
 	for (b = 3; b * b <= a; b += 2)
 	{
 		while (a % b == 0)
@@ -28,17 +40,4 @@ long int prime_factors(long int a)
 	if (a > 2)
 		largestNumb = a;
 	return (largestNumb);
-}
-
-/**
- * main - entry point
- *
- * Return: 0 success
- */
-int main(void)
-{
-	long int n = 612852475143;
-
-	printf("%li \n", prime_factors(n));
-	return (0);
 }
