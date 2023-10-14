@@ -2,7 +2,7 @@
 
 /**
  * prime_factors - accept a value to find it prime factors
- * a@: value to find it prime factor
+ * @a: value to find it prime factor
  */
 void prime_factors(int a)
 {
@@ -34,6 +34,7 @@ void prime_factors(int a)
 int main(void)
 {
 	long int n = 612852475143;
+
 	prime_factors(n);
 	return (0);
 }
