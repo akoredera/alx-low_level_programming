@@ -3,27 +3,31 @@
 /**
  * prime_factors - accept a value to find it prime factors
  * @a: value to find it prime factor
+ *
+ * Return: b as the largest prime factor
  */
-void prime_factors(long int a)
+long int prime_factors(long int a)
 {
-	int b;
+	long int b;
 
 	while (a % 2 == 0)
 	{
+		b = 2;
 		a = a / 2;
+
 	}
 
 	for (b = 3; b * b <= a; b += 2)
 	{
 		while (a % b == 0)
 		{
+			b = a;
 			a = a / b;
 		}
-
 	}
-	printf("%d \n", b);
 	if (a > 2)
-		printf("%li \n", a);
+		b = a;
+	return (b);
 }
 
 /**
@@ -35,6 +39,6 @@ int main(void)
 {
 	long int n = 612852475143;
 
-	prime_factors(n);
+	printf("%li \n", prime_factors(n));
 	return (0);
 }
