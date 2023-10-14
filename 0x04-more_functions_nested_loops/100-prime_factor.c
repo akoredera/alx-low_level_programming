@@ -8,11 +8,11 @@
  */
 long int prime_factors(long int a)
 {
-	long int b;
+	long int largestNumb, b;
 
 	while (a % 2 == 0)
 	{
-		b = 2;
+		largestNumb = 2;
 		a = a / 2;
 
 	}
@@ -21,13 +21,13 @@ long int prime_factors(long int a)
 	{
 		while (a % b == 0)
 		{
-			b = a;
+			largestNumb = b;
 			a = a / b;
 		}
 	}
 	if (a > 2)
-		b = a;
-	return (b);
+		largestNumb = a;
+	return (largestNumb);
 }
 
 /**
