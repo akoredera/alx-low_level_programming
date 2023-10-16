@@ -6,9 +6,9 @@
  */
 void puts_half(char *str)
 {
-	unsigned int i;
+	int i;
 
-	for (i = (strlen(str)) / 2; i < strlen(str); i++)
+	for (i = (strlen(str)) / 2; str[i] != '\0'; i++)
 		printf("%c", str[i]);
 	printf("\n");
 }
