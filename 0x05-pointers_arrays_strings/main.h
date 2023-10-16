@@ -1,4 +1,4 @@
-#ifdef HEADER_FILE
+#ifndef HEADER_FILE
 #define HEADER_FILE
 
 int _putchar(char c);
@@ -7,4 +7,6 @@ void swap_int(int *a, int *b);
 int _strlen(char *s);
 void _puts(char *str);
 void print_rev(char *s);
+void puts_half(char *str);
+
 #endif
