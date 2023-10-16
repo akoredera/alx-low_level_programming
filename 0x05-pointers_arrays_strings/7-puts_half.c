@@ -1,4 +1,5 @@
 #include "stdio.h"
+#include "string.h"
 /**
  * puts_half - print half of the str provided
  * @str: str variable to print half of it
