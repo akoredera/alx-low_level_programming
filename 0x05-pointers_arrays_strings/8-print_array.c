@@ -1,3 +1,4 @@
+#include "stdio.h"
 /**
  * print_array - print array
  * @a: array list
