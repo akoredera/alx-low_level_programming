@@ -3,7 +3,7 @@
  * @dest: first string variable
  * @src: second string variable
  * @n: third variable that contain number
- * * Return: dest
+ * Return: dest
  */
 char *_strncpy(char *dest, char *src, int n)
 {
@@ -13,7 +13,7 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		strlen++;
 	}
-	for (j = 0; j <= n && j <= strlen; j++)
+	for (j = 0; j < n && j < strlen; j++)
 	{
 		dest[j] = src[j];
 	}
