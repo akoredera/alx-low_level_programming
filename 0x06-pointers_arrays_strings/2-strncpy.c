@@ -1,5 +1,5 @@
 /**
- * _strncat - concatenate two strings based actual number given
+ * _strncpy - cpy one string to another based on actual number given
  * @dest: first string variable
  * @src: second string variable
  * @n: third variable that contain number
@@ -18,6 +18,6 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[j] = src[j];
 	}
 	for ( ; j < n; j++)
-                   dest[j] = '\0';
+		dest[j] = '\0';
 	return (dest);
 }
