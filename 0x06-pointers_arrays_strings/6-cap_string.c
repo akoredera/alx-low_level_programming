@@ -1,3 +1,8 @@
+/**
+ * cap_string - capital the string
+ * @a: character
+ * Return: a
+ */
 char *cap_string(char *a)
 {
 	int i, j;
