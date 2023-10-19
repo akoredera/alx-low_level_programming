@@ -1,27 +1,19 @@
-#include "stdio.h"
+#include "main.h"
 /**
- * reverse_array - reverse array value
- * @a: an array of integers
- * @n: the number of elements to swap
- *
- * Return: nothing.
+ * reverse_array - reverse array
+ * @a: array to reverse
+ * @n: number of element to swap
+ * Return: nothing
  */
 void reverse_array(int *a, int n)
 {
-	int i;
+	int i, j;
+	int storeChar;
 
-	i = n - 1;
-	while (i >= 0)
+	for (j = n - 1, i = 0; i < j; i++, j--)
 	{
-		if (i == 0)
-		{
-			printf("%d", a[i]);
-			break;
-		}
-		printf("%d", a[i]);
-		printf(", ");
-		i--;
-	}
-	printf("\n");
+		storeChar = a[i];
+		a[i] = a[j];
+		a[j] = storeChar;
 }
-
+}
