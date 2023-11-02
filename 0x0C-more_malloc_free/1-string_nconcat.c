@@ -29,6 +29,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = realloc(ptr, n);
 	for (j = 0; j < n; j++)
 	{
+		if ((j+1)== n)
+		{
+			ptr[i] = '\0';
+		}
 		ptr[i] = s2[j];
 		i++;
 	}
