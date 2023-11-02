@@ -1,6 +1,6 @@
 #include "stdlib.h"
 /**
- * string_concat - concatenates two strings
+ * string_nconcat - concatenates two strings
  * @s1: first string
  * @s2: second string
  * @n: number of char to concat
