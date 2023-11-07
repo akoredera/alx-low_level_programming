@@ -20,13 +20,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (doggy == NULL)
 		return (NULL);
 	doggy->name = malloc(1 + name_len * sizeof(doggy->name));
-	if (doggy == NULL)
+	if (doggy->name == NULL)
 		return (NULL);
 	for (i = 0; i < name_len; i++)
 		doggy->name[i] = name[i];
 	doggy->age = age;
 	doggy->owner = malloc(1 + owner_len * sizeof(doggy->owner));
-	if (doggy == NULL)
+	if (doggy->owner == NULL)
 		return (NULL);
 	for (i = 0; i < owner_len; i++)
 		doggy->owner[i] = owner[i];
