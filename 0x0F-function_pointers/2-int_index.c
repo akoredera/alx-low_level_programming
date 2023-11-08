@@ -5,7 +5,7 @@
  */
 int cmp(int a)
 {
-	if (a == 98)
+	if (a != 0)
 		return (a);
 	else
 		return (-1);
@@ -26,5 +26,5 @@ int int_index(int *array, int size, int (*cmp)(int))
 	for (i = 0; i < size; i++)
 	if (cmp(array[i]))
 		return (i);
-	return (i);
+	return (-1);
 }
