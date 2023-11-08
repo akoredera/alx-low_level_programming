@@ -8,7 +8,7 @@ int cmp(int a)
 	if (a != 0)
 		return (a);
 	else
-		return (-1);
+		return (0);
 }
 /**
  * int_index - return index of array
