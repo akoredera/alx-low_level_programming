@@ -5,7 +5,7 @@
  */
 int cmp(int a)
 {
-	if (a != 0)
+	if (a)
 		return (a);
 	else
 		return (-1);
