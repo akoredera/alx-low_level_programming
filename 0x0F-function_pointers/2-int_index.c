@@ -5,7 +5,7 @@
  */
 int cmp(int a)
 {
-	return (a != 0);
+	return (cmp(a));
 }
 /**
  * int_index - return index of array
