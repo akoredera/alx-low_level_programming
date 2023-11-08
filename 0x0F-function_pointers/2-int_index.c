@@ -5,9 +5,10 @@
  */
 int cmp(int a)
 {
-	if (a != 0)
+	if (a == 98)
 		return (a);
-	return (a);
+	else
+		return (-1);
 }
 /**
  * int_index - return index of array
