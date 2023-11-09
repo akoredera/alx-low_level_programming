@@ -18,6 +18,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		if ((i + 1) == n)
 			printf("%d\n", va_arg(num, int));
+		else if (!(separator))
+			printf("%d, ", va_arg(num, int));
 		else
 			printf("%d%s", va_arg(num, int), separator);
 	}
