@@ -4,7 +4,6 @@
  * print_all - print anything
  * @format: pointer to a string of format
  * @...: argument list
- * Return: null
  */
 void print_all(const char * const format, ...)
 {
@@ -46,6 +45,6 @@ void print_all(const char * const format, ...)
 		}
 		format_ptr++;
 	}
-	printf("\n");
 	va_end(my_arg);
+	printf("\n");
 }
