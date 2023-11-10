@@ -45,9 +45,7 @@ void print_all(const char * const format, ...)
 				break;
 		}
 		if ((*(format_ptr + 1) != '\0') && check == 0)
-		{
 			printf(", ");
-		}
 		format_ptr++;
 	}
 	va_end(my_arg);
