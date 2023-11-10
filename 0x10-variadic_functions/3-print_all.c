@@ -15,30 +15,26 @@ void print_all(const char * const format, ...)
 	va_start(my_arg, format);
 	while (*format_ptr)
 	{
+		check = 0;
 		switch (*format_ptr)
 		{
 			case 'c':
 				putchar(va_arg(my_arg, int));
-				check = 0;
 				break;
 			case 'f':
 				printf("%f", va_arg(my_arg, double));
-				check = 0;
 				break;
 			case 'i':
 				printf("%i", va_arg(my_arg, int));
-				check = 0;
 				break;
 			case 's':
 				s = va_arg(my_arg, char *);
 				if (!(s))
 				{
 					printf("(nil)");
-					check = 0;
 					break;
 				}
 				printf("%s", s);
-				check = 0;
 				break;
 			default:
 				check = 1;
