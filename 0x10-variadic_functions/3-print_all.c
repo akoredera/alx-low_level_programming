@@ -38,25 +38,11 @@ void print_all(const char * const format, ...)
 			default:
 				break;
 		}
-		if (*(format_ptr + 1) != '\0')
+		if (*(format_ptr + 1) != '\0' &&
+		(((*format_ptr) == 'c') || ((*format_ptr) == 'f') ||
+		 ((*format_ptr) == 's') || ((*format_ptr) == 'i')))
 		{
-			switch (*(format_ptr))
-			{
-				case 'c':
-					printf(", ");
-					break;
-				case 'f':
-					printf(", ");
-					break;
-				case 's':
-					printf(", ");
-					break;
-				case 'i':
-					printf(", ");
-					break;
-				default:
-					break;
-			}
+			printf(", ");
 		}
 		format_ptr++;
 	}
