@@ -37,9 +37,8 @@ void print_all(const char * const format, ...)
 			default:
 				break;
 		}
-		if (*(format_ptr + 1) != '\0' &&
-		(((*format_ptr) == 'c') || ((*format_ptr) == 'f') ||
-		 ((*format_ptr) == 's') || ((*format_ptr) == 'i')))
+		if (*(format_ptr + 1) != '\0' && (((*format_ptr) == 'c') ||
+		 ((*format_ptr) == 'f') || ((*format_ptr) == 's') || ((*format_ptr) == 'i')))
 		{
 			printf(", ");
 		}
