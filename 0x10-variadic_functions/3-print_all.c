@@ -8,15 +8,14 @@
 void print_all(const char * const format, ...)
 {
 	va_list my_arg;
-	char *format_ptr = (char *)format;
 	char *s;
-	int check;
+	int check, i = 0;
 
 	va_start(my_arg, format);
-	while (*format_ptr && *format_ptr != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		check = 0;
-		switch (*format_ptr)
+		switch (format[i])
 		{
 			case 'c':
 				printf("%c", va_arg(my_arg, int));
@@ -40,9 +39,9 @@ void print_all(const char * const format, ...)
 				check = 1;
 				break;
 		}
-		if ((*(format_ptr + 1) != '\0') && check == 0)
+		if (format[i + 1] != '\0' && check == 0)
 			printf(", ");
-		format_ptr++;
+		i++;
 	}
 	va_end(my_arg);
 	printf("\n");
