@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <string.h>
 /**
- * print_list - prints all the element
+ * list_len - return number of element
  * @h: struct element to print
  * Return: unsigned integer
  */
