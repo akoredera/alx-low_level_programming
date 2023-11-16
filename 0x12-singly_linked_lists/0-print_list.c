@@ -16,7 +16,7 @@ size_t print_list(const list_t *h)
 	while (ptr != NULL)
 	{
 		count++;
-		printf("[%d] %s\n", len_str(ptr->str), str_result(ptr->str));
+		printf("[%u] %s\n", len_str(ptr->str), str_result(ptr->str));
 		ptr = ptr->next;
 	}
 	return (count);
@@ -26,7 +26,7 @@ size_t print_list(const list_t *h)
  * @str: string value
  * Return: success length otherwise 0
  */
-int len_str(char *str)
+unsigned int len_str(char *str)
 {
 	if (str == NULL)
 		return (0);
