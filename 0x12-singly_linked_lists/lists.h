@@ -18,6 +18,7 @@ typedef struct list_s
     unsigned int len;
     struct list_s *next;
 } list_t;
+list_t *add_node_end(list_t **head, const char *str);
 unsigned int len_str(char * str);
 list_t *add_node(list_t **head, const char *str);
 char *str_result(char *str);
