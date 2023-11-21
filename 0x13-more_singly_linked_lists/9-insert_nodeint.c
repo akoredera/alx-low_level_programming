@@ -27,8 +27,7 @@ listint_t *ptr, *temp;
 		{
 			ptr->next = temp->next;
 			temp->next = ptr;
-			*head = temp->next;
-			return (*head);
+			return (ptr);
 		}
 		temp = temp->next;
 	}
