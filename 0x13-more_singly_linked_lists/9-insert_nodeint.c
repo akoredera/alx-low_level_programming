@@ -24,10 +24,10 @@ listint_t *ptr, *temp;
 	{
 		if (idx == 0)
 		{
-			ptr->next = temp->next;
+			ptr->next = temp;
 			*head = ptr;
 			return (*head);
-		} 
+		}
 		counter++;
 		if (counter == idx)
 		{
