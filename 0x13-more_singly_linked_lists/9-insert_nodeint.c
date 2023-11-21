@@ -31,5 +31,7 @@ listint_t *ptr, *temp;
 		}
 		temp = temp->next;
 	}
+	if (counter == idx && temp == NULL)
+		return (NULL);
 	return (NULL);
 }
