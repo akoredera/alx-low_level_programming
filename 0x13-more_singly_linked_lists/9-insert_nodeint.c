@@ -16,8 +16,6 @@ listint_t *ptr, *temp;
 	counter = 0;
 	if (ptr == NULL)
 		return (NULL);
-	if (*head == NULL)
-		return (NULL);
 	ptr->n = n;
 	ptr->next = NULL;
 	while (temp != NULL)
