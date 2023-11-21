@@ -17,6 +17,7 @@ listint_t *ptr, *temp;
 	if (ptr == NULL)
 		return (NULL);
 	if (*head == NULL)
+		free(ptr);
 		return (NULL);
 	ptr->n = n;
 	ptr->next = NULL;
