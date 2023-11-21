@@ -29,7 +29,7 @@ listint_t *ptr, *temp;
 			return (ptr);
 		}
 		counter++;
-		else if (counter == idx)
+		if (counter == idx)
 		{
 			ptr->next = temp->next;
 			temp->next = ptr;
