@@ -16,18 +16,20 @@ listint_t *ptr, *temp;
 	counter = 0;
 	if (ptr == NULL)
 		return (NULL);
+	if (*head == NULL)
+		return (NULL);
 	ptr->n = n;
 	ptr->next = NULL;
 	while (temp != NULL)
 	{
 		if (idx == 0)
 		{
-			ptr->next = temp;
+			ptr->next = *head;
 			*head = ptr;
 			return (ptr);
 		}
 		counter++;
-		if (counter == idx)
+		else if (counter == idx)
 		{
 			ptr->next = temp->next;
 			temp->next = ptr;
@@ -35,5 +37,5 @@ listint_t *ptr, *temp;
 		}
 		temp = temp->next;
 	}
-	return (ptr);
+	return (NULL);
 }
