@@ -18,8 +18,6 @@ listint_t *ptr, *temp;
 		return (NULL);
 	if (*head == NULL)
 		return (NULL);
-	if (idx < 0)
-		return (NULL);
 	ptr->n = n;
 	ptr->next = NULL;
 	while (temp != NULL)
