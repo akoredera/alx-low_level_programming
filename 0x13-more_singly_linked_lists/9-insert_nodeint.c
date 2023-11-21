@@ -23,7 +23,7 @@ listint_t *ptr, *temp;
 	while (temp != NULL)
 	{
 		counter++;
-		if (counter == idx && temp->next != NULL)
+		if (counter == idx)
 		{
 			ptr->next = temp->next;
 			temp->next = ptr;
