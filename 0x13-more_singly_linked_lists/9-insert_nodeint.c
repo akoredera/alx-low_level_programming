@@ -25,11 +25,11 @@ listint_t *ptr, *temp;
 		counter++;
 		if (counter == idx && temp->next != NULL)
 		{
-			break;
+			ptr->next = temp->next;
+			temp->next = ptr;
+			return (ptr);
 		}
 		temp = temp->next;
 	}
-	ptr->next = temp->next;
-	temp->next = ptr;
-	return (ptr);
+	return (NULL);
 }
