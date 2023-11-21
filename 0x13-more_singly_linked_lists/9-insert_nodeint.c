@@ -35,5 +35,5 @@ listint_t *ptr, *temp;
 		}
 		temp = temp->next;
 	}
-	return (NULL);
+	return (ptr);
 }
