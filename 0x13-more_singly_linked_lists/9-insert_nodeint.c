@@ -22,6 +22,12 @@ listint_t *ptr, *temp;
 	ptr->next = NULL;
 	while (temp != NULL)
 	{
+		if (idx == 0)
+		{
+			ptr->next = temp->next;
+			*head = ptr;
+			return (*head);
+		} 
 		counter++;
 		if (counter == idx)
 		{
