@@ -26,7 +26,7 @@ listint_t *ptr, *temp;
 		{
 			ptr->next = temp;
 			*head = ptr;
-			return (*head);
+			return (ptr);
 		}
 		counter++;
 		if (counter == idx)
