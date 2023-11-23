@@ -6,13 +6,24 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int i;
+	if (n == 0)
+		_putchar('0');
+	else
+		bin_check(n);
+}
 
-	for (i = n | 1; i > 0; i = i / 2)
-	{
-		if (n & i)
-			_putchar('1');
-		else
-			_putchar('0');
-	}
+/**
+ * bin_check - check the binary representation of a number
+ * @n: binary rep
+ * Return: VOID
+ */
+void bin_check(unsigned long int n)
+{
+	if (n == 0)
+		return;
+	bin_check(n >> 1);
+	if ((n & 1) == 1)
+		_putchar('1');
+	if ((n & 1) == 0)
+		_putchar('0');
 }
