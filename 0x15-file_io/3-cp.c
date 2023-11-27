@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void cp_file_from_and_file_to(const char *filename1, const char *filename2);
 /**
  * main - check the code
  * @ac: number of arguement
@@ -35,9 +34,11 @@ int main(int ac, char **av)
 		dprintf(2, "Can't write to file %s", filename2);
 		exit(99);
 	}
-	read_size = read(fd1, ch, 1024);
-	write(fd2, ch, read_size);
-	close(fd2);
+	while ((read_size = read(fd1, ch, 1024)) > 0)
+	{
+		write(fd2, ch, read_size);
+	}
+	close(fd1);
 	close(fd2);
 	if (fd1 < 0)
 	{
