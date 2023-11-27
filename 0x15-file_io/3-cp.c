@@ -14,6 +14,8 @@ int main(int ac, char **av)
 	int fd1, fd2, read_size;
 	char *ch = malloc(1024), *filename1, *filename2;
 
+	if (ch == NULL)
+		return (0);
 	if (ac != 3)
 	{
 		dprintf(2, "Usage: cp file_from file_to\n");
@@ -47,5 +49,6 @@ int main(int ac, char **av)
 		dprintf(2, "Can't close fd %d", fd2);
 		exit(100);
 	}
+	free(ch);
 	return (0);
 }
