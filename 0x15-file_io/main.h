@@ -4,8 +4,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
+void cp_file_from_and_file_to(const char *filename1, const char *filename2);
 ssize_t read_textfile(const char *filename, size_t letters);
 int _putchar(char c);
 int create_file(const char *filename, char *text_content);
