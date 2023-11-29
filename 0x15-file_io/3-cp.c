@@ -1,7 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
  * main - check the code
  * @ac: number of arguement
@@ -11,6 +8,7 @@
 int main(int ac, char **av)
 {
 	int fd1, fd2, read_size;
+	mode_t old_umask;
 	char *ch = malloc(1024), *filename1, *filename2;
 
 	if (ch == NULL)
@@ -28,16 +26,16 @@ int main(int ac, char **av)
 		dprintf(2, "Can't read from file %s", filename1);
 		exit(98);
 	}
+	old_umask = umask(0);
 	fd2 = open(filename2, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd2 == -1)
 	{
 		dprintf(2, "Can't write to file %s", filename2);
 		exit(99);
 	}
+	umask(old_umask);
 	while ((read_size = read(fd1, ch, 1024)) > 0)
-	{
 		write(fd2, ch, read_size);
-	}
 	close(fd1);
 	close(fd2);
 	if (fd1 < 0)
