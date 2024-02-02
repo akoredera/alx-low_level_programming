@@ -1,5 +1,9 @@
 #ifndef HASH_TABLES_h
 #define HASH_TABLES_h
+
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 /**
  * struct hash_node_s - Node of a hash table
  *
@@ -29,9 +33,6 @@ typedef struct hash_table_s
 	hash_node_t **array;
 } hash_table_t;
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 
 void free_hash_node(hash_node_t *node);
 void free_table(hash_table_t *table);
