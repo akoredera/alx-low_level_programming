@@ -1,7 +1,7 @@
 
-CC := gcc
 
+#CC := gcc
 SRC := school.c main.c
-all: school
+#all: school
 school:
-	${CC} ${SRC} -o $@
+	cc ${SRC} -o $@
