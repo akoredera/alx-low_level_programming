@@ -1,10 +1,3 @@
-CC := gcc
-
-SRCS := $(wildcard *.c)
-BINS := $(SRCS:%.c=%)
-
 all: school
-%: %.c
-	${CC} ${SRCS} -o $@
-
-
+school:
+	gcc main.c school.c -o school
